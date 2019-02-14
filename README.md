@@ -15,4 +15,4 @@ action "cpplint command" {
   args = "cpplint ."
 }
 ```
-Or to add other [cpplint options](http://flake8.pycqa.org) to __args =__ above.
+Or to add other [cpplint options](https://github.com/cpplint/cpplint) to __args =__ above.
