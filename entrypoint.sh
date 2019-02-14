@@ -2,9 +2,9 @@
 set -e
 
 echo "#################################################"
-echo "Starting GitHub Action for cpplint"
+echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 
 sh -c "$*"
 
 echo "#################################################"
-echo "Completed GitHub Action for cpplint"
+echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
