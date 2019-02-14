@@ -15,4 +15,14 @@ action "cpplint command" {
   args = "cpplint ."
 }
 ```
-Or to add other [cpplint options](https://github.com/cpplint/cpplint) to __args =__ above.
+Or to add other cpplint options to __args =__ above.
+```
+Syntax: cpplint.py [--verbose=#] [--output=emacs|eclipse|vs7|junit]
+                   [--filter=-x,+y,...]
+                   [--counting=total|toplevel|detailed] [--repository=path]
+                   [--root=subdir] [--linelength=digits] [--recursive]
+                   [--exclude=path]
+                   [--headers=ext1,ext2]
+                   [--extensions=hpp,cpp,...]
+        <file> [file] ...
+```
