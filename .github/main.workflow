@@ -5,5 +5,5 @@ workflow "New workflow" {
 
 action "cpplint command" {
   uses = "cclauss/GitHub-Action-for-cpplint@master"
-  args = "cpplint --help"
+  args = "cpplint --help "
 }
