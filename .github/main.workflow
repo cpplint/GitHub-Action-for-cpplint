@@ -1,4 +1,4 @@
-workflow "New workflow" {
+workflow "GitHub Action for cpplint" {
   on = "push"
   resolves = ["cpplint command"]
 }
