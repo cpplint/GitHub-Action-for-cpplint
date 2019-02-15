@@ -5,12 +5,12 @@ Each time that new code is pushed into your repo, you can have a [cpplint](https
 Example workflow:
 * Put the following text into a file named `.github/main.workflow` in your repo):
 ```hcl
-workflow "GitHub Action for cpplint" {
+workflow "on push" {
   on = "push"
-  resolves = ["cpplint command"]
+  resolves = ["GitHub Action for cpplint"]
 }
 
-action "cpplint command" {
+action "GitHub Action for cpplint" {
   uses = "cclauss/GitHub-Action-for-cpplint@master"
   args = "cpplint ."
 }
