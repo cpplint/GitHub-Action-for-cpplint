@@ -1,9 +1,9 @@
-workflow "GitHub Action for cpplint" {
+workflow "on push" {
   on = "push"
-  resolves = ["cpplint command"]
+  resolves = ["GitHub Action for cpplint"]
 }
 
-action "cpplint command" {
+action "GitHub Action for cpplint" {
   uses = "cclauss/GitHub-Action-for-cpplint@master"
   args = "cpplint --help "
 }
