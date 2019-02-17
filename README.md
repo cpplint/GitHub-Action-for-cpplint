@@ -12,7 +12,7 @@ workflow "on push" {
 
 action "GitHub Action for cpplint" {
   uses = "cclauss/GitHub-Action-for-cpplint@master"
-  args = "cpplint ."
+  args = "cpplint --recursive ."
 }
 ```
 Or to add other cpplint options to __args =__ above.
