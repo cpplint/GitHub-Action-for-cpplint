@@ -1,0 +1,12 @@
+on: push
+name: on push
+jobs:
+  gitHubActionForCpplint:
+    name: GitHub Action for cpplint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: GitHub Action for cpplint
+      uses: cclauss/GitHub-Action-for-cpplint@master
+      with:
+        args: cpplint --help
