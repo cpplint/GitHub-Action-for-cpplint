@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: GitHub Action for cpplint
-      uses: cclauss/GitHub-Action-for-cpplint@master
+      uses: cpplint/GitHub-Action-for-cpplint@master
       with:
-        args: cpplint --help
+        args: cpplint --recursive .
