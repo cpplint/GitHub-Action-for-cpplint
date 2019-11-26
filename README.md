@@ -8,7 +8,7 @@ Example workflow:
 name: cpplint
 on: [push, pull_request]
 jobs:
-  build:
+  cpplint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
