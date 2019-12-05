@@ -3,6 +3,7 @@
 # 1. runs cpplint only on those files that have been modified vs. origin/master.
 # 2. compiles with g++ only those files that have been modified vs. origin/master.
 # 3. other optional filepath verifications may be commented out at the end of this file.
+# From: https://github.com/cpplint/GitHub-Action-for-cpplint
 
 name: cpplint_modified_files
 on: [push, pull_request]
