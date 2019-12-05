@@ -31,3 +31,10 @@ Syntax: cpplint.py [--verbose=#] [--output=emacs|eclipse|vs7|junit]
                    [--extensions=hpp,cpp,...]
         <file> [file] ...
 ```
+
+### cpplint_modified_files.yml
+
+[cpplint_modified_files.yml](https://github.com/cpplint/GitHub-Action-for-cpplint/blob/master/.github/workflows/cpplint_modified_files.yml) is an __alternative__, standalone GitHub Action that enables a repo to achieve _gradual compliance_ with cpplint by linting (and compiling) only those files that have been added or modified (vs. origin/master).
+1. runs cpplint only on those files that have been modified vs. origin/master.
+2. compiles with g++ only those files that have been modified vs. origin/master.
+3. other optional filepath verifications may be commented out at the end of this file.
