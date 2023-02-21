@@ -11,11 +11,12 @@ jobs:
   cpplint_modified_files:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - shell: python  # Show the version of shell: python and then upgrade shell: python to Python 3.8
-        run: import sys ; print("Python {}.{}.{}".format(*sys.version_info))  # Legacy Python :-(
-      - run: sudo update-alternatives --install /usr/bin/python python ${pythonLocation}/bin/python3.8 10
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - shell: python  # Print the version of Python
+        run: import sys ; print("Python {}.{}.{}".format(*sys.version_info))
       - run: python -m pip install cpplint
       - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - run: git diff origin/master --name-only > git_diff.txt
@@ -26,7 +27,7 @@ jobs:
           import subprocess
           import sys
 
-          print("Python {}.{}.{}".format(*sys.version_info))  # Python 3.8
+          print("Python {}.{}.{}".format(*sys.version_info))  # Currently Python 3.11.2
           with open("git_diff.txt") as in_file:
             modified_files = sorted(in_file.read().splitlines())
           print("{} files were modified.".format(len(modified_files)))
