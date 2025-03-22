@@ -1,6 +1,6 @@
 # GitHub Action for running cpplint commands
 
-Each time that new code is pushed into your repo, you can have a [cpplint](https://github.com/cpplint/cpplint) command automatically run.
+Each time new code is pushed into your repo, you can have a [cpplint](https://github.com/cpplint/cpplint) command automatically run.
 
 Example workflow:
 * Put the following text into a file named `.github/workflows/cpplint.yml` in your repo):
@@ -11,10 +11,8 @@ jobs:
   cpplint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
-    - run: pip install cpplint
-    - run: cpplint --recursive .
+    - uses: actions/checkout@v4
+    - run: pipx run cpplint --recursive .
 ```
 Customize the final line to match your requirements.
 ```
